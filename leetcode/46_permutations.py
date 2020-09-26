@@ -4,7 +4,7 @@ class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         answer = []
         n = len(nums)
-        visited = [0] * 10
+        visited = [0] * n
 
         if not nums:
             return

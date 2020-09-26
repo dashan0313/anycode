@@ -18,7 +18,7 @@ class Solution:
         candidates.sort()
 
         def back(start,t,tmp):
-            if t == 0:
+            if t == 0: #终止条件
                 answers.append(tmp)
                 return
             for k in range(start,n):
@@ -27,6 +27,7 @@ class Solution:
                 if k > start and candidates[k] == candidates[k-1]:
                     continue
                 #注意不要写成tmp = tmp + [candidates[k]],那样全局设置就变了
+                #同理，也不要写成tmp.append()，和上面结果一样的！
                 back(k + 1,t - candidates[k],tmp + [candidates[k]])
 
         back(0,target,[])

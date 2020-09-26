@@ -22,7 +22,7 @@ while right < n:
         right += 1
     else:
         length =min(length,right-left)  #因为上面的right + 1了所以这里直接减
-        temp -= num[left]
+        temp -= num[left] #你往前往后推了还不知道结果怎么样呢当然要先算长度
         left += 1
 while temp >= s:
     length = min(length,n-left)
