@@ -26,6 +26,7 @@ class Solution:
                     continue
                 if k > start and candidates[k] == candidates[k-1]:
                     continue
+                #如果在树的同一层，就用第一个阿
                 #注意不要写成tmp = tmp + [candidates[k]],那样全局设置就变了
                 #同理，也不要写成tmp.append()，和上面结果一样的！
                 back(k + 1,t - candidates[k],tmp + [candidates[k]])
